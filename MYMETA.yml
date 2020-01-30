@@ -1,15 +1,15 @@
 ---
 abstract: 'Perl extension for using an embedding WebKit2 engine for tests'
 author:
-  - 'Jason Carty <jc@atikon.com>'
+  - 'Jason  Shaun Carty <jc@atikon.com>'
   - 'Philipp Voglhofer <pv@atikon.com>'
-  - 'Philipp Lehner <pl@atikon.com>'
+  - 'Philipp A. Lehner <pl@atikon.com>'
 build_requires:
   ExtUtils::MakeMaker: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'ExtUtils::MakeMaker version 7.44, CPAN::Meta::Converter version 2.150010'
+generated_by: 'ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.150010'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
