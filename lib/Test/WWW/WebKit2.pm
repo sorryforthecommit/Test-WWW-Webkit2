@@ -164,6 +164,20 @@ sub wait_for_pending_requests_ok {
     return $retval;
 }
 
+sub prepare_async_page_load_ok {
+    my ($self, $variable_name) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+    $self->prepare_async_page_load($variable_name);
+}
+
+sub wait_for_async_page_load_ok {
+    my ($self, $timeout, $variable_name) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+    $self->wait_for_async_page_load($timeout, $variable_name);
+}
+
 sub is_element_present_ok {
     my ($self, $locator) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
