@@ -92,10 +92,20 @@ sub select_ok {
 }
 
 sub click_ok {
+    my ($self, $locator, $wait) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+    my $retval = ok(eval { $self->click($locator, $wait) }, "click_ok($locator)")
+        or $self->shout($@);
+
+    return $retval;
+}
+
+sub click_and_wait_ok {
     my ($self, $locator) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    my $retval = ok(eval { $self->click($locator) }, "click_ok($locator)")
+    my $retval = ok(eval { $self->click_and_wait($locator) }, "click_and_wait_ok($locator)")
         or $self->shout($@);
 
     return $retval;
