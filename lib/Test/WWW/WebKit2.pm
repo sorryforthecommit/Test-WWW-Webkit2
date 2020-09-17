@@ -42,7 +42,7 @@ has 'debug' => (
     default => 0,
 );
 
-our $VERSION = '0.1';
+our $VERSION = '0.11';
 
 sub shout {
     my ($self, $error) = @_;
