@@ -102,11 +102,13 @@ sub click_ok {
 }
 
 sub click_and_wait_ok {
-    my ($self, $locator) = @_;
+    my ($self, $locator, $timeout) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    my $retval = ok(eval { $self->click_and_wait($locator) }, "click_and_wait_ok($locator)")
-        or $self->shout($@);
+    my $retval = ok(
+        eval { $self->click_and_wait($locator, $timeout) },
+        "click_and_wait_ok($locator)"
+    ) or $self->shout($@);
 
     return $retval;
 }
