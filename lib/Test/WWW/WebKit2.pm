@@ -30,7 +30,7 @@ None by default.
 use 5.10.0;
 use Moose;
 
-extends 'WWW::WebKit2' => { -version => 0.13 };
+extends 'WWW::WebKit2' => { -version => 0.126 };
 
 use Glib qw(TRUE FALSE);
 use Time::HiRes qw(time usleep);
@@ -42,7 +42,7 @@ has 'debug' => (
     default => 0,
 );
 
-our $VERSION = '0.11';
+our $VERSION = '0.111';
 
 sub shout {
     my ($self, $error) = @_;
