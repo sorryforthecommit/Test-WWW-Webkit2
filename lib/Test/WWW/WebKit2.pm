@@ -100,7 +100,7 @@ sub click_ok {
     $description //= '';
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    $timeout ||= $self->default_timeout;
+    $timeout ||= 0;
 
     my $result = eval { $self->click($locator, $timeout) };
 
